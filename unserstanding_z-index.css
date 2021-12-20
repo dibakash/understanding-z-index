@@ -1,0 +1,69 @@
+.container {
+  width: 600px;
+  height: 300px;
+  background-color: burlywood;
+  margin: auto;
+  position: relative;
+  z-index: 0;
+  margin-top: 150px;
+}
+
+.container::before {
+  content: "container before";
+  background-color: rgba(179, 120, 120, 0.898);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  margin-top: -30px;
+  margin-left: 30px;
+}
+
+.container::after {
+  content: "container after";
+  background-color: rgba(0, 0, 255, 0.816);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  margin-top: -60px;
+  margin-left: 60px;
+  z-index: 6;
+}
+
+.box {
+  width: 400px;
+  height: 60%;
+  background-color: cadetblue;
+  position: absolute;
+  margin-top: 140px;
+  margin-left: -60px;
+  opacity: 0.9;
+  z-index: 5;
+}
+
+.box::before {
+  content: "box before";
+  position: absolute;
+  width: 100%;
+  height: 60px;
+  top: 0;
+  left: 0;
+  margin-top: 10px;
+  margin-left: -80px;
+  background-color: blueviolet;
+  box-shadow: 0 0 10px black;
+  z-index: 0;
+}
+
+.box::after {
+  content: "box after";
+  position: absolute;
+  width: 100%;
+  height: 60px;
+  margin-top: 30px;
+  margin-left: -60px;
+  top: 20%;
+  left: 0;
+  background-color: coral;
+  box-shadow: 0 0 10px black;
+  z-index: 7;
+}
